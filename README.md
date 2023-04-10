@@ -4,11 +4,19 @@
 
 # <b>Lambda</b> tasks (internship)
 
-`Chapter 1`
+<h1>
+<font color="blue">
+<b>
+Chapter 1
+</b>
+</font>
+</h1>
 
-0. <h3><b>Dots</b> </h3>Write a script that would take a string consisting of several letters as input, and return an array of strings with all possible combinations of placing strings between them.
+<br/>
+<h3><font color="yellow">0. <b>Dots</b> </font></h3>Write a script that would take a string consisting of several letters as input, and return an array of strings with all possible combinations of placing strings between them.
 
-1. <h3> <b>CLI: Interactive sort </b></h3>An application that, once launched, will:
+<br/>
+<h3><font color="yellow">1. <b>CLI: Interactive sort </b></font></h3>An application that, once launched, will:
 
 - wait for the user to enter a few words and numbers THROUGH THE SPACE;
 - ask a question what the user would like to see at the output - what operation to do with words and numbers, namely:
@@ -20,9 +28,10 @@
   - Show only unique values from the entire set of words and numbers entered by the user.
   - To exit the program, the user just needs to type `exit` otherwise the program will repeat again and again, requesting new data and suggesting sorting.
 
-2. <h3> <b>Primitive DB</b></h3>
+<br/>
+<h3><font color="yellow">2. <b>Primitive DB</b></font></h3>
 
-   **App work algorithm:**
+**App work algorithm:**
 
 - after launch, a message is displayed with a request to specify a name;
 - then it is suggested to choose a gender from the list;
@@ -38,7 +47,8 @@
 - pay attention to the search algorithm. Remember that Google returns you when you enter a query, you probably get more than one link as a relevant result.
 - take into account the option that the user may like to write in CAPS, but still wants to get valid results
 
-3. <h3> <b>Telegram Console Sender</b></h3>
+<br/>
+<h3><font color="yellow">3. <b>Telegram Console Sender</b></font></h3>
 
 So, what your application should be able to do:
 
@@ -55,3 +65,14 @@ So, what your application should be able to do:
      The result of executing this command is a photo sent to the Telegram bot from your PC. After its execution, the CLI itself terminates the process so that the next command can be entered.
 
 - Think about the fact that it will be important for the user to learn how to use your CLI, so take care to describe the commands and display the corresponding recommendations via —help.
+
+<br/>
+<h3><font color="yellow">4. <b>Telegram Echo</b></font></h3>
+
+**Task:** Create an echo Telegram bot that will display messages from the user in the console, and also send a picture if the user enters `photo` in the message.
+
+**What is needed for this task:**
+
+- `node-telegram-bot-api`
+- `axios'
+- service for generating random pictures: [https://picsum.photos/200/300](https://picsum.photos/200/300) (this is your endpoint, to which a random picture will be sent for every request) .
