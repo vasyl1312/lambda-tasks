@@ -37,3 +37,21 @@
 - organize data storage in your database in such a way that each user can be easily turned into an object, i.e. you think in such a way that in front of you is the prototype of a non-relational database, and in the txt file there is almost ready-made JSON (the parse and stringify methods should work with a bang).
 - pay attention to the search algorithm. Remember that Google returns you when you enter a query, you probably get more than one link as a relevant result.
 - take into account the option that the user may like to write in CAPS, but still wants to get valid results
+
+3. <h3> <b>Telegram Console Sender</b></h3>
+
+So, what your application should be able to do:
+
+- A **message** will be sent to the Telegram bot (which you will create beforehand and connect to your application) from the console using the following command:
+
+`node app message 'Your message'`
+
+     The result of executing this command is the appearance of your message in your Telegram bot. After its execution, the CLI itself terminates the process so that the next command can be entered.
+
+- **They will send a photo**, which you drag into the console (or use the handles to enter the correct root for the photo on your PC) using the command:
+
+`node app photo /path/to/photo/picture.png`
+
+     The result of executing this command is a photo sent to the Telegram bot from your PC. After its execution, the CLI itself terminates the process so that the next command can be entered.
+
+- Think about the fact that it will be important for the user to learn how to use your CLI, so take care to describe the commands and display the corresponding recommendations via —help.
