@@ -2,21 +2,21 @@
   <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="300" />
 </div>
 
-# <b>Lambda</b> tasks (internship)
+# <b>Lambda</b> tasks (<span style="color:green">internship</span>)
 
 <h1>
-<font color="blue">
+<span style="color:blue">
 <b>
 Chapter 1
 </b>
-</font>
+</span>
 </h1>
 
 <br/>
-<h3><font color="yellow">0. <b>Dots</b> </font></h3>Write a script that would take a string consisting of several letters as input, and return an array of strings with all possible combinations of placing strings between them.
+<h3><span style="color:yellow">0. <b>Dots</b> </span></h3>Write a script that would take a string consisting of several letters as input, and return an array of strings with all possible combinations of placing strings between them.
 
 <br/>
-<h3><font color="yellow">1. <b>CLI: Interactive sort </b></font></h3>An application that, once launched, will:
+<h3><span style="color:yellow">1. <b>CLI: Interactive sort </b></span></h3>An application that, once launched, will:
 
 - wait for the user to enter a few words and numbers THROUGH THE SPACE;
 - ask a question what the user would like to see at the output - what operation to do with words and numbers, namely:
@@ -29,7 +29,7 @@ Chapter 1
   - To exit the program, the user just needs to type `exit` otherwise the program will repeat again and again, requesting new data and suggesting sorting.
 
 <br/>
-<h3><font color="yellow">2. <b>Primitive DB</b></font></h3>
+<h3><span style="color:yellow">2. <b>Primitive DB</b></span></h3>
 
 **App work algorithm:**
 
@@ -48,7 +48,7 @@ Chapter 1
 - take into account the option that the user may like to write in CAPS, but still wants to get valid results
 
 <br/>
-<h3><font color="yellow">3. <b>Telegram Console Sender</b></font></h3>
+<h3><span style="color:yellow">3. <b>Telegram Console Sender</b></span></h3>
 
 So, what your application should be able to do:
 
@@ -67,7 +67,7 @@ So, what your application should be able to do:
 - Think about the fact that it will be important for the user to learn how to use your CLI, so take care to describe the commands and display the corresponding recommendations via —help.
 
 <br/>
-<h3><font color="yellow">4. <b>Telegram Echo</b></font></h3>
+<h3><span style="color:yellow">4. <b>Telegram Echo</b></span></h3>
 
 **Task:** Create an echo Telegram bot that will display messages from the user in the console, and also send a picture if the user enters `photo` in the message.
 
@@ -76,3 +76,27 @@ So, what your application should be able to do:
 - `node-telegram-bot-api`
 - `axios'
 - service for generating random pictures: [https://picsum.photos/200/300](https://picsum.photos/200/300) (this is your endpoint, to which a random picture will be sent for every request) .
+
+<br/>
+<h3><span style="color:yellow">5. <b>TelegramBot: weather forecast</b></span></h3>
+
+Your task: to write a bot that will give the user a weather forecast for a particular city. Choose a city according to your taste or place of residence, uncritically.
+
+**Telegram bot requirements:**
+
+- it should be able to return a weather forecast for every 3 hours or every 6 hours on user request.
+- the menu structure should be represented by the buttons: "Forecast in the Dnipro" ⇒ "With an interval of 3 hours" / "with an interval of 6 hours" (one button, after pressing which a menu with two more buttons opens).
+- the bot should work all the time, and not just at the moment when you start the server. To do this, use a service like Render/Vercel/Hiroku(not free).
+
+**What you need for the bot:**
+
+- `OpenWeather API` ([documentation](https://openweathermap.org/api)).
+- `node-telegram-bot-api` to customize your bot logic
+- `Render/Vercel/Hiroku` service for unloading the finished code and running it "on the server"
+- `Axios` for making API requests.
+
+**Note:**
+
+- the answer should be returned in a "satisfactory variant".
+- consider using sockets so that your bot does not fall asleep after 30 minutes.
+- When writing a bot, keep in mind that in one of the following tasks you will have to supplement its functionality.
