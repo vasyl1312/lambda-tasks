@@ -49,6 +49,7 @@ Chapter 1
 
 <br/>
 <h3><span style="color:yellow">3. <b>Telegram Console Sender</b></span></h3>
+<a href="https://t.me/console_senderBot" target="_blank">Link in Telegram</a>
 
 So, what your application should be able to do:
 
@@ -68,6 +69,7 @@ So, what your application should be able to do:
 
 <br/>
 <h3><span style="color:yellow">4. <b>Telegram Echo</b></span></h3>
+<a href="https://t.me/WeatherForecast_and_RateBot" target="_blank">Link in Telegram</a>
 
 **Task:** Create an echo Telegram bot that will display messages from the user in the console, and also send a picture if the user enters `photo` in the message.
 
@@ -79,6 +81,7 @@ So, what your application should be able to do:
 
 <br/>
 <h3><span style="color:yellow">5. <b>TelegramBot: weather forecast</b></span></h3>
+<a href="https://t.me/WeatherForecast_and_RateBot" target="_blank">Link in Telegram</a>
 
 Your task: to write a bot that will give the user a weather forecast for a particular city. Choose a city according to your taste or place of residence, uncritically.
 
@@ -100,3 +103,11 @@ Your task: to write a bot that will give the user a weather forecast for a parti
 - the answer should be returned in a "satisfactory variant".
 - consider using sockets so that your bot does not fall asleep after 30 minutes.
 - When writing a bot, keep in mind that in one of the following tasks you will have to supplement its functionality.
+
+<br/>
+<h3><span style="color:yellow">6. <b>TelegramBot: exchange currency Bot </b></span></h3>
+<a href="https://t.me/WeatherForecast_and_RateBot" target="_blank">Link in Telegram</a>
+
+- To the previously created weather bot, add two buttons that will allow you to find out the USD and EUR rates.
+- To do this, use the PrivatBank or Monobank APIs. Keep in mind that Monobank does not allow requests to be executed more often than once every 60 seconds, and dozens of people can use your bot.
+- Implement this logic so that the bot does not return an error, but provides the current exchange rate.
