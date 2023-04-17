@@ -4,13 +4,7 @@
 
 # <b>Lambda</b> tasks (<span style="color:green">internship</span>)
 
-<h1>
-<span style="color:blue">
-<b>
-Chapter 1
-</b>
-</span>
-</h1>
+## `Chapter 1`
 
 <br/>
 <h3><span style="color:yellow">0. <b>Dots</b> </span></h3>Write a script that would take a string consisting of several letters as input, and return an array of strings with all possible combinations of placing strings between them.
@@ -111,3 +105,26 @@ Your task: to write a bot that will give the user a weather forecast for a parti
 - To the previously created weather bot, add two buttons that will allow you to find out the USD and EUR rates.
 - To do this, use the PrivatBank or Monobank APIs. Keep in mind that Monobank does not allow requests to be executed more often than once every 60 seconds, and dozens of people can use your bot.
 - Implement this logic so that the bot does not return an error, but provides the current exchange rate.
+
+<br/>
+<h3><span style="color:yellow">7. <b>Google Uploader</b></span></h3>
+
+The application should **upload the picture** to the specified and pre-prepared folder in Google Drive.
+
+🤘🏻 What you need to do a task:
+
+- Axios
+- inquirer
+- documentation for Google Drive and OAuth2
+- API to shorten links: [https://api.tinyurl.com/](https://tinyurl.com/app/dev)
+
+⚠️ **What to consider in a task:**
+
+- use official Google documentation and configure the application (get OAuth keys, etc.) in Google Console.
+- use Inquirer to create a console interface
+- keep in mind that the Access token has an expiry date and you should consider the update script, otherwise the tab will not work
+- all the necessary credits apply to the project
+
+<!-- <br/><br/>
+################################################
+## `Chapter 2` -->
