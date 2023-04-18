@@ -125,6 +125,45 @@ The application should **upload the picture** to the specified and pre-prepared 
 - keep in mind that the Access token has an expiry date and you should consider the update script, otherwise the tab will not work
 - all the necessary credits apply to the project
 
-<!-- <br/><br/>
+<br/><br/>
 ################################################
-## `Chapter 2` -->
+
+## `Chapter 2`
+
+<br/>
+<h3><span style="color:yellow">8. <b>Instagram Giveaway </b></span></h3>
+
+You have **20 files**, each containing 100,000 phrases ([**download**](https://www.dropbox.com/s/cmfya22t3dr0ms5/2kk_words_400x400.zip?dl=0)) . Total - 2 million phrases. They were generated from two batches of 400 random words, so they are repeatedly repeated in all or some files. You need:
+
+> 1️⃣ Determine how many **unique usernames** there are in all specified files (occurs at least once in any of the files).
+>
+> 2️⃣ Determine how many **usernames** occur simultaneously **in all 20 files**.
+>
+> 3️⃣ Find out how many **usernames** occur at the same time, **in at least 10 files**.
+
+> **IMPORTANT: We measure the results of the execution of your program - how long does the program calculate (look for how to do this). If it takes you more than a few seconds to complete, then you are doing something wrong. Results with 5-12 or more minutes of execution are not accepted, alas, but this is a web.**
+
+<aside>
+💡 For practice, we suggest you first try your hand at a more "compact version" of the problem. In
+
+([**this archive**](https://www.dropbox.com/s/4llp3potsenghzg/200k_words_100x100.zip?dl=0))
+there are still 20 files, but they already have 10 thousand (instead of 100 thousand as) phrases that were formed from two batches of random words 100 in each. Total 200,000 phrases.
+
+</aside>
+</br>
+
+**MANDATORY** indicate what answers you have when submitting this task. Need a cricket.
+
+The answer is output in the console, after the launch of three separate functions. For example:
+
+- `uniqueValues()` - _// ⇒ Unique phrases: 1234_
+- `existInAllFiles()` - _// ⇒ Phrases found in all 20 files: 2222_
+- `existInAtLeastTen()` - _// ⇒ Phrases found in at least ten files: 3333_
+
+In total, we complete the task in **three** stages:
+
+1️⃣ We take the first archive with 200,000 values and follow all three points above.
+
+2️⃣ Repeat with an archive of 2 million values.
+
+3️⃣ We think and offer a way to speed up the algorithm (we fight for the minimum execution time).
