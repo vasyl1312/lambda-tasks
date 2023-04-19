@@ -167,3 +167,6 @@ In total, we complete the task in **three** stages:
 2️⃣ Repeat with an archive of 2 million values.
 
 3️⃣ We think and offer a way to speed up the algorithm (we fight for the minimum execution time).
+
+<br/>
+<h3><span style="color:yellow">9. <b>Vacation grouping</b></span></h3>
