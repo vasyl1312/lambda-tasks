@@ -18,7 +18,7 @@ var isAnagramtoPalindrome = function (str) {
 console.log(isAnagramtoPalindrome('rpypyl')); //false
 console.log(isAnagramtoPalindrome('olexaloxe')); //true
 console.log(isAnagramtoPalindrome('forof')); //true
-////
+/////////////////////////////////////////////////////////////////////////////////////////
 var isAnagramToPalindrome = function (str) {
     var charStr = str.toLowerCase().split('');
     var checked = new Set();
