@@ -170,3 +170,20 @@ In total, we complete the task in **three** stages:
 
 <br/>
 <h3><span style="color:yellow">9. <b>Vacation grouping</b></span></h3>
+
+    On the input you have JSON, in which you have developers. Each one has a unique id, name, and different holiday periods and other information. You literally have to "comb" this JSON into a different, more usable and versatile form.
+
+  <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F96528f01-c8d5-49d7-a4be-262c97980c52%2FUntitled.png?id=33e03917-efba-489b-b1f2-f73b30d3112d&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=990&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2"/>
+
+In the original JSON, when a user has **multiple periods** of holiday, this information is rendered \*\*as a separate object for the user name repeating.
+
+**But we don't want it that way - we're drowning in optimization and convenience. Therefore:**
+
+Write an algorithm that will **from the original JSON** make a neater and prettier one, in which:
+
+1. There will be no "superfluous" fields like Status, usedDays, \_id of request.
+2. Holiday periods will be output as an array in a nice and clear form.
+3. The user himself will appear once in JSON regardless of number of holidays taken.
+
+Here's an option that would be ideal for you to get:
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6d963f7b-8373-42e1-bb2d-c653efe05eb7%2Fkasd.jpg?id=f8acb19e-ed74-4db5-9317-85a4a02d0d7b&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=2000&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2"/>
