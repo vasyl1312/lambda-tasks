@@ -171,7 +171,7 @@ In total, we complete the task in **three** stages:
 <br/>
 <h3><span style="color:yellow">9. <b>Vacation grouping</b></span></h3>
 
-    On the input you have JSON, in which you have developers. Each one has a unique id, name, and different holiday periods and other information. You literally have to "comb" this JSON into a different, more usable and versatile form.
+On the input you have JSON, in which you have developers. Each one has a unique id, name, and different holiday periods and other information. You literally have to "comb" this JSON into a different, more usable and versatile form.
 
   <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F96528f01-c8d5-49d7-a4be-262c97980c52%2FUntitled.png?id=33e03917-efba-489b-b1f2-f73b30d3112d&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=990&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2"/>
 
@@ -187,3 +187,19 @@ Write an algorithm that will **from the original JSON** make a neater and pretti
 
 Here's an option that would be ideal for you to get:
 <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6d963f7b-8373-42e1-bb2d-c653efe05eb7%2Fkasd.jpg?id=f8acb19e-ed74-4db5-9317-85a4a02d0d7b&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=2000&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2"/>
+
+<br/>
+<h3><span style="color:yellow">10. <b>JSON Sorting</b></span></h3>
+
+So, you have a list of **20 endpoints**.
+
+Each of them returns a response in a different format and with different key/value pairs. But they all have one thing in common - absolutely all GET-requests are returned by JSON which has the key ¹isDone™ with the boolean value. Queries are divided into four types in which the key/value you are seeking is at different levels of nesting.
+
+Your task:
+
+- Write an app that will poll all the above-mentioned endpoints. Consider a scenario in which a request will be sent several times (up to three is enough) if the previous request fails. If there is no response, remove the result from the issue, but print the error in the console.
+
+- In all the endpoints you get, you need to find the key ːisDone™ and find out if it has the value: ê True™ or ¿False ː.
+
+The result of the successful launch of your application will be the response format:
+  <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8463c7b9-b52c-4d0a-870e-561148b7a0d9%2FUntitled.png?id=bbe4ecb7-7412-4afb-be55-a28ff322c4b9&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=730&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2"/>
