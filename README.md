@@ -202,4 +202,41 @@ Your task:
 - In all the endpoints you get, you need to find the key ːisDone™ and find out if it has the value: ê True™ or ¿False ː.
 
 The result of the successful launch of your application will be the response format:
-  <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8463c7b9-b52c-4d0a-870e-561148b7a0d9%2FUntitled.png?id=bbe4ecb7-7412-4afb-be55-a28ff322c4b9&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=730&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2"/>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8463c7b9-b52c-4d0a-870e-561148b7a0d9%2FUntitled.png?id=bbe4ecb7-7412-4afb-be55-a28ff322c4b9&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=730&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2"/>
+
+<br/>
+<h3><span style="color:yellow">11. <b>Geopositioning by IP</b></span></h3>
+
+So, you have at your disposal a CSV table [**table\***](https://www.dropbox.com/s/wo0dexr0p3q4fgb/IP2LOCATION-LITE-DB1.CSV?dl=0))., in which you will find a long list of rows with IP and 2-IP bands respectively.
+
+Yours task is to write a web application on Express, highlighting the end point by which a server-hosted algorithm will be able to determine where the user came from and return the IP address value and the country from which the request was made.
+
+- **The application should be able:**
+  - _Identify the user’s IP phone by transition_
+  - _Determine user location by IP phone using CSV base_
+  - _return to the user the range of addresses (in the «human» clear form) and the country on table_
+
+> 🙏 **Note,** NPM force, we acknowledge this, but you need to define the location WITHOUT additional modules, using the CSV file attached above.
+
+Your project can be divided into several modules (why? - I wait for you in the box if you are stuck at the stage of understanding the task). Take your time, no rush. Your algorithm can work extremely slowly in the first stages, think about how it can be accelerated (little hello from the problem [**Insta Giveaway\***](https://github.com/vasyl1312/lambda-tasks/tree/main/main-chapter/8.instagramGiveaway)).
+
+### **How do we check:**
+
+Of course I will. But first the performance test: you run Ngrok on your side (**[link](https://ngrok.com/)** to familiarize this console utility), we knock on the endpoint code and want to see everything described above as a JSON-response.
+
+### 👆 **How to check yourself?**
+
+We have prepared for you a list of IP addresses that are allocated to specific countries. If you have done everything correctly, your script should successfully return the response (or to start the output in the console), pointing to the correct country when sending the ID to the Body request:
+
+> Chile - 45.232.208.143
+> Armenia - 185.182.120.34
+> Mexico - 45.177.176.23
+> Turkey - 5.44.80.51
+> Norway - 91.149.48.22
+> Spain - 83.229.33.3
+> Cyprus - 203.24.108.65
+> UK - 23.43.23.15
+> Ireland - 89.28.176.5
+> Romania - 77.83.248.211
+
+To check, you can also install Ngrok and play with Proxy by knocking on an open Ngrok address.
