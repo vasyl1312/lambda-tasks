@@ -90,10 +90,6 @@ Yours task is to write a web application on Express, highlighting the end point 
 
 Your project can be divided into several modules (why? - I wait for you in the box if you are stuck at the stage of understanding the task). Take your time, no rush. Your algorithm can work extremely slowly in the first stages, think about how it can be accelerated (little hello from the problem [**Insta Giveaway\***](https://github.com/vasyl1312/lambda-tasks/tree/main/main-chapter/8.instagramGiveaway)).
 
-### **How do we check:**
-
-Of course I will. But first the performance test: you run Ngrok on your side (**[link](https://ngrok.com/)** to familiarize this console utility), we knock on the endpoint code and want to see everything described above as a JSON-response.
-
 ### 👆 **How to check yourself?**
 
 We have prepared for you a list of IP addresses that are allocated to specific countries. If you have done everything correctly, your script should successfully return the response (or to start the output in the console), pointing to the correct country when sending the ID to the Body request:
@@ -110,3 +106,48 @@ We have prepared for you a list of IP addresses that are allocated to specific c
 > Romania - 77.83.248.211
 
 To check, you can also install Ngrok and play with Proxy by knocking on an open Ngrok address.
+
+<br/>
+<h3><span style="color:yellow">12. <b>Correctarium</b></span></h3>
+
+In the task it is necessary to write **algorithm of calculation of cost**, time of execution and date of delivery (deadline). Below are the original business requirements that the client has announced.
+
+### **Part #1**
+
+Original business requirements:
+<img src="
+https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faa3fe82c-5ec4-4ead-97b9-a7e2335070af%2Fphoto_2021-06-02_20.18.31.jpeg?id=99a95e3d-99a7-411a-bb93-c1a801d03a08&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=2000&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2">
+
+### **Part #2.1**
+
+After writing the algorithm (it seems not to be very difficult) you need to thoroughly check everything. For example, the order was placed at 7 pm on Sunday and the deadline was 11 pm on Sunday night, customers were not satisfied and until we covered all the tests could not be repaired.
+
+Long story short - in this part of the job we cover the algorithm with tests using [JestJs](https://jestjs.io).
+
+**DO NOT READ BEFORE COVERED BY TESTS,**
+Break business logic, make it count wrong and see if your test breaks down.
+
+### **Part #2.2**
+
+Write a server application on ExpressJs, REST API to which you can send source data in json format
+
+{
+
+    "language": "en",
+    "mimetype": "none|doc|docx|rtf|other" //other for multiplayer, price 1.2
+    "count": 10_000
+
+}
+
+and the API in turn will respond
+
+{
+
+    "price": 100.0
+    "time": 1
+    "deadline": 1623822732 //UNIX
+    "deadline_date": "10/10/2021 12:00:00"
+
+}
+
+It is important that business logic tests lie side by side in a project and you can run npm run test to check everything and then with npm start to run the application.
