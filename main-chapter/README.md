@@ -151,3 +151,49 @@ and the API in turn will respond
 }
 
 It is important that business logic tests lie side by side in a project and you can run npm run test to check everything and then with npm start to run the application.
+
+<br/>
+<h3><span style="color:yellow">13. <b>Authorization</b></span></h3>
+
+POST /sign_up
+body json:
+email: «email»
+password: «password»
+
+---
+
+POST /login?email=<email>&password=<password>
+
+---
+
+GET /me[0-9]
+headers:
+Authorization: Bearer <access_token>
+
+---
+
+POST /refresh
+headers:
+Authorization: Bearer <refresh_token>
+
+<b>
+Write a REST API based on ExpressJs for registration/login based on JWT tokens.
+</b>
+sign_up registers the user
+login and issues an access token with TTL (time to live) from 30 to 60 seconds (randomly)
+refresh resets the new access token
+me[0-9] gives mock user data and a separate query number field
+If the token has exploded (its TTL time has expired) answer 401 Unauthorised
+
+GET /me1
+
+{
+
+    "request_num": 1,
+    "data": {
+    	"username": "login из токена пользователя"
+    }
+
+}
+
+To store user data, use MongoDB, a simple driver without Mongoose
