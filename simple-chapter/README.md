@@ -16,6 +16,8 @@
   - Show only unique values from the entire set of words and numbers entered by the user.
   - To exit the program, the user just needs to type `exit` otherwise the program will repeat again and again, requesting new data and suggesting sorting.
 
+---
+---
 <br/>
 <h3><span style="color:yellow">2. <b>Primitive DB</b></span></h3>
 
@@ -35,6 +37,8 @@
 - pay attention to the search algorithm. Remember that Google returns you when you enter a query, you probably get more than one link as a relevant result.
 - take into account the option that the user may like to write in CAPS, but still wants to get valid results
 
+---
+---
 <br/>
 <h3><span style="color:yellow">3. <b>Telegram Console Sender</b></span></h3>
 <a href="https://t.me/console_senderBot" target="_blank">Link in Telegram</a>
@@ -55,6 +59,8 @@ So, what your application should be able to do:
 
 - Think about the fact that it will be important for the user to learn how to use your CLI, so take care to describe the commands and display the corresponding recommendations via —help.
 
+---
+---
 <br/>
 <h3><span style="color:yellow">4. <b>Telegram Echo</b></span></h3>
 <a href="https://t.me/WeatherForecast_and_RateBot" target="_blank">Link in Telegram</a>
@@ -67,6 +73,8 @@ So, what your application should be able to do:
 - `axios'
 - service for generating random pictures: [https://picsum.photos/200/300](https://picsum.photos/200/300) (this is your endpoint, to which a random picture will be sent for every request) .
 
+---
+---
 <br/>
 <h3><span style="color:yellow">5. <b>TelegramBot: weather forecast</b></span></h3>
 <a href="https://t.me/WeatherForecast_and_RateBot" target="_blank">Link in Telegram</a>
@@ -92,6 +100,8 @@ Your task: to write a bot that will give the user a weather forecast for a parti
 - consider using sockets so that your bot does not fall asleep after 30 minutes.
 - When writing a bot, keep in mind that in one of the following tasks you will have to supplement its functionality.
 
+---
+---
 <br/>
 <h3><span style="color:yellow">6. <b>TelegramBot: exchange currency Bot </b></span></h3>
 <a href="https://t.me/WeatherForecast_and_RateBot" target="_blank">Link in Telegram</a>
@@ -100,6 +110,8 @@ Your task: to write a bot that will give the user a weather forecast for a parti
 - To do this, use the PrivatBank or Monobank APIs. Keep in mind that Monobank does not allow requests to be executed more often than once every 60 seconds, and dozens of people can use your bot.
 - Implement this logic so that the bot does not return an error, but provides the current exchange rate.
 
+---
+---
 <br/>
 <h3><span style="color:yellow">7. <b>Google Uploader</b></span></h3>
 

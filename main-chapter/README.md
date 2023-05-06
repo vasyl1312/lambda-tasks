@@ -38,6 +38,10 @@ In total, we complete the task in **three** stages:
 
 3️⃣ We think and offer a way to speed up the algorithm (we fight for the minimum execution time).
 
+---
+
+---
+
 <br/>
 <h3><span style="color:yellow">9. <b>Vacation grouping</b></span></h3>
 
@@ -58,6 +62,10 @@ Write an algorithm that will **from the original JSON** make a neater and pretti
 Here's an option that would be ideal for you to get:
 <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6d963f7b-8373-42e1-bb2d-c653efe05eb7%2Fkasd.jpg?id=f8acb19e-ed74-4db5-9317-85a4a02d0d7b&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=2000&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2"/>
 
+---
+
+---
+
 <br/>
 <h3><span style="color:yellow">10. <b>JSON Sorting</b></span></h3>
 
@@ -73,6 +81,10 @@ Your task:
 
 The result of the successful launch of your application will be the response format:
 <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8463c7b9-b52c-4d0a-870e-561148b7a0d9%2FUntitled.png?id=bbe4ecb7-7412-4afb-be55-a28ff322c4b9&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=730&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2"/>
+
+---
+
+---
 
 <br/>
 <h3><span style="color:yellow">11. <b>Geopositioning by IP</b></span></h3>
@@ -106,6 +118,10 @@ We have prepared for you a list of IP addresses that are allocated to specific c
 > Romania - 77.83.248.211
 
 To check, you can also install Ngrok and play with Proxy by knocking on an open Ngrok address.
+
+---
+
+---
 
 <br/>
 <h3><span style="color:yellow">12. <b>Correctarium</b></span></h3>
@@ -152,6 +168,10 @@ and the API in turn will respond
 
 It is important that business logic tests lie side by side in a project and you can run npm run test to check everything and then with npm start to run the application.
 
+---
+
+---
+
 <br/>
 <h3><span style="color:yellow">13. <b>Authorization</b></span></h3>
 
@@ -197,3 +217,29 @@ GET /me1
 }
 
 To store user data, use MongoDB, a simple driver without Mongoose
+
+---
+
+---
+
+<br/>
+<h3><span style="color:yellow">15. <b>JSON-storage</b>(TS)</span></h3>
+So, you have to write a server application that will STORE and GIVE JSON on request. In fact, we are making a similar service jsonbase.com. In this case, the user will be able to specify the desired router within the domain and send his JSON, which will return on the entered router. Magic, isn’t it?😃
+<img src="
+https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7a2a51b9-adf8-47d4-abed-7a3fab43c37d%2FUntitled.png?id=6978e957-15fe-4d63-98a6-2e7ba710e9ec&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=1940&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2">
+To put it simply:
+
+- User adds to baseURL of your service his own router
+- Prescribes your desired Body
+- Sends a POST Request
+- Immediately goes over the specified OWN PATH and receives a response as JSON.
+
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb92b248e-2952-4034-a287-006e4c7da9de%2FUntitled.png?id=c17fabe0-23d6-4841-8d20-f8b67238d61e&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=1810&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2">
+
+👆 Points on the task:
+
+**Where to store?** For your taste and color (but there is soil for thinking).
+
+**How to check?** Postman and many-many tests;)
+
+**Errors...** Think for the user, where can he frankly screw up...\* Keep this in mind in your app by considering all potential scenarios.
