@@ -225,8 +225,7 @@ To store user data, use MongoDB, a simple driver without Mongoose
 <br/>
 <h3><span style="color:yellow">15. <b>JSON-storage</b>(TS)</span></h3>
 So, you have to write a server application that will STORE and GIVE JSON on request. In fact, we are making a similar service jsonbase.com. In this case, the user will be able to specify the desired router within the domain and send his JSON, which will return on the entered router. Magic, isn’t it?😃
-<img src="
-https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7a2a51b9-adf8-47d4-abed-7a3fab43c37d%2FUntitled.png?id=6978e957-15fe-4d63-98a6-2e7ba710e9ec&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=1940&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2">
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7a2a51b9-adf8-47d4-abed-7a3fab43c37d%2FUntitled.png?id=6978e957-15fe-4d63-98a6-2e7ba710e9ec&table=block&spaceId=2055905c-b0a9-4a70-840e-652fb3ddf0d4&width=1940&userId=1eff93d4-281b-4cb7-9815-f73cb9b2abb3&cache=v2">
 To put it simply:
 
 - User adds to baseURL of your service his own router
@@ -240,6 +239,67 @@ To put it simply:
 
 **Where to store?** For your taste and color (but there is soil for thinking).
 
-**How to check?** Postman and many-many tests;)
+**How to check?** Postman and many-many tests;
 
 **Errors...** Think for the user, where can he frankly screw up...\* Keep this in mind in your app by considering all potential scenarios.
+
+---
+
+---
+
+<br/>
+<h3><span style="color:yellow">16. <b>Crypto Rest API</b>(TS)</span></h3>
+We have five exchanges listed below. Each exchange has its own API. Every five minutes, we request all APIs to
+
+**get the current price of cryptocurrencies and keep them in the database for each market.**
+
+Create an endpoint that returns cryptocurrency data. Query parameters should be able to:
+
+- specify a specific crypt;
+- a specific market (external API) if the market in the query parameters is not passed - return the AVERAGE market price calculated from all five markets;
+- for what period to return the crypt data (for the last 15 minutes, 1 hour, 4 hours, 24 hours);
+
+# Technology
+
+- Node.js;
+- Express.js;
+- DataBase (MySQL) (other ORM);
+- CRON;
+- Cryptocurrency APIs.
+- Heroku;
+- NgRok.
+
+# Cryptocurrency API list
+
+- [CoinMarketCap](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsLatest);
+- [CoinBase](https://developers.coinbase.com/api/v2?javascript#introduction);
+- [CoinStats](https://documenter.getpostman.com/view/5734027/RzZ6Hzr3);
+- [Kucoin](https://docs.kucoin.com/#general);
+- [CoinPaprika](https://api.coinpaprika.com/);
+
+---
+
+---
+
+<br/>
+<h3><span style="color:yellow">18. <b>ShortLinker</b>(TS)</span></h3>
+
+Your job is to create a server application that:
+
+- Will accept from the user in the Body POST-query with reference to the resource;
+- as a respondent will return a shortened version of this link;
+- If you continue using the link created, the user should be able to access the original resource, which he wanted to reduce.
+
+<aside>
+💡 
+<b>What to consider in a drag?</b>
+
+- the user can make a mistake and enter as an abbreviated link some nonsense - warn him about it in response;
+- the look of your short link should look really concise - return the long url to the request for a long - absurd idea.
+- in this task you have complete freedom to implement - you choose the tools yourself, the main thing is that everything works;
+- services to reduce a TinyUrl, etc., as well as similar thematic apics DO NOT USE
+</aside>
+
+---
+
+---
