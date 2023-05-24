@@ -247,6 +247,7 @@ To put it simply:
 
 ---
 
+<!--
 <br/>
 <h3><span style="color:yellow">16. <b>Crypto Rest API</b>(TS)</span></h3>
 We have five exchanges listed below. Each exchange has its own API. Every five minutes, we request all APIs to
@@ -279,7 +280,7 @@ Create an endpoint that returns cryptocurrency data. Query parameters should be 
 
 ---
 
----
+--- -->
 
 <br/>
 <h3><span style="color:yellow">18. <b>ShortLinker</b>(TS)</span></h3>
@@ -303,3 +304,68 @@ Your job is to create a server application that:
 ---
 
 ---
+
+<br/>
+<h3><span style="color:yellow">19. <b>Array custom</b>(TS)</span></h3>
+
+Implement a similar custom method. Let’s call it multiply and consider the ability to transmit the parameter factor , which will be an optional multiplier for each element of our array.
+
+If there is no multiplier, multiply each element of the array by 10. As a result, you should have something like:
+
+    const arrayOfNumbers = [1, 2, 3, 4, 5];
+
+    console.log(arrayOfNumbers.multiply(2)) // [2, 4, 6, 8, 10]
+    console.log(arrayOfNumbers.multiply()) // [10, 20, 30, 40, 50]
+
+<aside>
+💡 That is, nothing is worse than. map, . filter, . reduce, etc.
+
+Now I want to draw your attention to what you need to consider in the task:
+
+- you use TS and STRICTLY type your method, i.e. the value returned after application of the method should not be any;
+- your method should have annotations and tell what is happening in it and what parameter is responsible for what;
+- do not suffer over classes - you create a method for working with arrays without first declaring the instance of any custom class. This is important.
+- do not produce files, let the whole project be implemented in one file, and everyone will be happy.
+- do not use standard array methods;
+</aside>
+<B>Write custom array methods listed in the list below. </B>
+
+About what and who should do the information there [here](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/).
+
+associateBy
+
+average
+
+chunked
+
+distinctBy
+
+filter
+
+filterIndexed
+
+filterNot
+
+find
+
+findLast
+
+flatten
+
+fold
+
+maxBy
+
+minBy
+
+count (with selector - we have an array of objects, inside object key, for example, population). And we want to count the total population for all objects. (analogue countBy).
+
+groupBy - both
+
+////////////////////////////////////////////////////////////////
+
+.all - returns true if all elements match the given predicate
+
+.any - returns true if sequence has at least one element.
+
+.associateBy - Returns a Map containing key-value pairs provided by transform function applied to elements of the given sequence.
