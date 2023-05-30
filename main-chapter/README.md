@@ -247,7 +247,6 @@ To put it simply:
 
 ---
 
-<!--
 <br/>
 <h3><span style="color:yellow">16. <b>Crypto Rest API</b>(TS)</span></h3>
 We have five exchanges listed below. Each exchange has its own API. Every five minutes, we request all APIs to
@@ -280,7 +279,7 @@ Create an endpoint that returns cryptocurrency data. Query parameters should be 
 
 ---
 
---- -->
+---
 
 <br/>
 <h3><span style="color:yellow">18. <b>ShortLinker</b>(TS)</span></h3>
