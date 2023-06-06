@@ -49,13 +49,17 @@ var express = require("express");
 var cron = require("node-cron");
 var axios_1 = require("axios");
 var promise_1 = require("mysql2/promise");
+var dotenv = require("dotenv");
+dotenv.config({ path: __dirname + '/.env' });
+require('dotenv').config({ path: __dirname + '/.env' });
+var port = process.env.PORT || 3000;
 var app = express();
 app.use(express.json());
 var pool = (0, promise_1.createPool)({
-    host: "localhost",
-    user: "root",
-    password: "Vasyl2002-",
-    database: "crypto",
+    host: "".concat(process.env.DB_HOST),
+    user: "".concat(process.env.DB_USER),
+    password: "".concat(process.env.DB_PASSWORD),
+    database: "".concat(process.env.DB_NAME),
 });
 // Функція для отримання актуальної ціни криптовалюти з API бірж
 function getLatestCryptoPrice(symbol, market) {
@@ -281,7 +285,9 @@ app.get('/cryptos', function (req, res) { return __awaiter(void 0, void 0, void 
                 _a.label = 7;
             case 7:
                 _a.trys.push([7, 10, , 11]);
-                return [4 /*yield*/, pool.getConnection()];
+                return [4 /*yield*/, pool.getConnection()
+                    //відносно дати шукаємо дані
+                ];
             case 8:
                 connection = _a.sent();
                 selectQuery = "\n      SELECT *\n      FROM crypto_prices\n      ".concat(whereClause, " AND timestamp >= ?\n      ORDER BY timestamp DESC\n    ");
@@ -298,7 +304,6 @@ app.get('/cryptos', function (req, res) { return __awaiter(void 0, void 0, void 
         }
     });
 }); });
-var port = process.env.PORT || 3000;
 app.listen(port, function () {
     console.log("Server is running on port ".concat(port));
 });

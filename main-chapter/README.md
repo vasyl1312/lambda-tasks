@@ -282,6 +282,29 @@ Create an endpoint that returns cryptocurrency data. Query parameters should be 
 ---
 
 <br/>
+<h3><span style="color:yellow">17. <b>Crypto TelegramBot
+</b>(TS)</span></h3>
+
+[Link](http://t.me/CryptoTSTelegramBot)
+
+Create a telegram bot that helps to modify the cryptocurrency. The bot works with the endpoint(s), which was created in [previous part]. Note that this is a <b>separate</b> project that only uses <b>Crypto REST API</b>
+
+The following functions should be performed:
+
+- `/start` - returns a welcome message;
+- `/help` - returns brief information about the bot and its list of commands;
+- `/listRecent` - Get a small (20-50 items) list of "high-rise" crypts. One site should look something like this: `/BTC $250€`, i.e. 250 is the last average price for a crypt, /BTC is an active team when clicking on which the user will get more information about this cryptocurrency; In more detail indicate the history of the average price for the latter.
+  24 hours. (withdraw: 30 minutes, 1 hour, 3 hours, 6 hours, 12 hours, 24 hours).
+- `/{currency_symbol}` get detailed information about the cryptocurrency. The information message also arrives online button - "Add/Remove to/from following" depending on whether there is a crypt in the following sheet;
+- `/addToFavourite {currency_symbol})` - Adds the crypt to the "favourites" section;
+- `/listFavourite` - returns a list of selected crypts in the /listRecent format;
+- `/deleteFavourite {currency_symbol}` - removes the crypt from the chosen one.
+
+---
+
+---
+
+<br/>
 <h3><span style="color:yellow">18. <b>ShortLinker</b>(TS)</span></h3>
 
 Your job is to create a server application that:

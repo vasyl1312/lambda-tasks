@@ -3,15 +3,19 @@ import * as cron from 'node-cron'
 import { Request, Response } from 'express'
 import axios from 'axios'
 import { createPool, Pool, PoolConnection } from 'mysql2/promise'
+import * as dotenv from 'dotenv'
+dotenv.config({ path: __dirname + '/.env' })
+require('dotenv').config({ path: __dirname + '/.env' })
+const port = process.env.PORT || 3000
 
 const app = express()
 app.use(express.json())
 
 const pool: Pool = createPool({
-  host: `localhost`,
-  user: `root`,
-  password: `Vasyl2002-`,
-  database: `crypto`,
+  host: `${process.env.DB_HOST}`,
+  user: `${process.env.DB_USER}`,
+  password: `${process.env.DB_PASSWORD}`,
+  database: `${process.env.DB_NAME}`,
 })
 
 // Функція для отримання актуальної ціни криптовалюти з API бірж
@@ -43,6 +47,7 @@ async function getLatestCryptoPrice(symbol: string, market: string): Promise<num
       case 'CoinBase':
         price = parseFloat(response.data.data.amount)
         break
+
       case 'CoinStats':
         const foundCoinStats = {
           data: {
@@ -52,6 +57,7 @@ async function getLatestCryptoPrice(symbol: string, market: string): Promise<num
 
         price = parseFloat(foundCoinStats.data.coins[0].price)
         break
+
       case 'Kucoin':
         const foundKucoin = {
           data: {
@@ -64,6 +70,7 @@ async function getLatestCryptoPrice(symbol: string, market: string): Promise<num
 
         price = parseFloat(foundKucoin.data.ticker[0].averagePrice)
         break
+
       case 'CoinPaprika':
         const foundCoinPaprika = response.data.reduce((res: any, obj: any) => {
           if (obj.symbol === symbol) {
@@ -157,6 +164,7 @@ app.get('/cryptos', async (req: Request, res: Response) => {
     whereClause += ' AND market = ?'
     values.push(market)
   } else {
+    //якщо нема маркета то шукаєм середнє
     const markets = ['CoinBase', 'CoinStats', 'Kucoin', 'CoinPaprika']
     let averagePrice = 0
 
@@ -166,7 +174,6 @@ app.get('/cryptos', async (req: Request, res: Response) => {
     }
 
     averagePrice /= markets.length
-
     return res.json({ averagePrice })
   }
 
@@ -191,7 +198,7 @@ app.get('/cryptos', async (req: Request, res: Response) => {
 
   try {
     const connection: PoolConnection = await pool.getConnection()
-
+    //відносно дати шукаємо дані
     let selectQuery = `
       SELECT *
       FROM crypto_prices
@@ -209,7 +216,6 @@ app.get('/cryptos', async (req: Request, res: Response) => {
   }
 })
 
-const port = process.env.PORT || 3000
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`)
 })
