@@ -1,0 +1,12 @@
+service: helloTask
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  helloName:
+    handler: hello.handler
+    name: helloTask
+    events:
+      - http: GET hello
